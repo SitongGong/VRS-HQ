@@ -39,7 +39,7 @@ Please follow the [VISA](https://github.com/cilinyan/VISA) project to download t
 First, download the pretrained weights of SAM2 (hiera_large) by running: 
 ```bash
 cd checkpoints
-./download_ckpts.sh
+bash download_ckpts.sh
 ```
 
 Second, download the pretrained weights of [Chat-UniVi](https://github.com/PKU-YuanGroup/Chat-UniVi) and [LLaVA-Phi-3-V](https://github.com/mbzuai-oryx/LLaVA-pp). 
@@ -56,7 +56,7 @@ We provide the model weights based on Chat-UniVi-7B and LLaVA-Phi3-V-3.8B:
 conda create -n vrshq python=3.10 -y
 conda activate vrshq
 git clone https://github.com/SitongGong/VRS-HQ
-cd segment-anything-2
+cd VRS-HQ
 pip install -e .
 # For Chat-UniVi
 pip install transformers==4.31.0
