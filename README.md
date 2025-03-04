@@ -7,6 +7,10 @@
 </div></font> -->
 Official code for "The Devil is in Temporal Token: High Quality Video Reasoning Segmentation" CVPR 2025! <span>&#x1F389;</span>
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/the-devil-is-in-temporal-token-high-quality/referring-video-object-segmentation-on-revos)](https://paperswithcode.com/sota/referring-video-object-segmentation-on-revos?p=the-devil-is-in-temporal-token-high-quality)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/the-devil-is-in-temporal-token-high-quality/referring-video-object-segmentation-on-mevis)](https://paperswithcode.com/sota/referring-video-object-segmentation-on-mevis?p=the-devil-is-in-temporal-token-high-quality)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/the-devil-is-in-temporal-token-high-quality/referring-expression-segmentation-on-refer-1)](https://paperswithcode.com/sota/referring-expression-segmentation-on-refer-1?p=the-devil-is-in-temporal-token-high-quality)
+
 ## <span>&#x1F525;</span> Our Approach
 ### Motivation
 Comparison with previous VRS approaches. (a) Previous methods utilize a single &lt;SEG&gt; token for keyframe-based segmentation, depending heavily on external models for keyframe detection and mask propagation. This reliance can hinder accurate keyframe localization and prevent end-to-end inference. (b) VRS-HQ introduces frame-level &lt;SEG&gt; and a temporal &lt;TAK&gt; token for dynamic aggregation. The aggregated &lt;TAK&gt; token is then used for both keyframe selection and mask generation within SAM2. This enables single-stage inference with precise keyframe selection and high-quality segmentation. (c) VRS-HQ achieves state-of-the-art performance on various image and video datasets across reasoning and referring segmentation.
