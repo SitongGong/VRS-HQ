@@ -31,7 +31,6 @@ In addition to providing the results of Chat-UniVi, we also present superior exp
 |   VISA    |     Chat-UniVi-7B    |            50.9          |       43.0        |       46.9        |
 |   VISA   |      Chat-UniVi-13B      |        57.4        |       44.3        |       50.9        |
 | VRS-HQ |      Chat-UniVi-7B    |        62.1         |        56.1       |       59.1        |
-|  VRS-HQ   |    LLaVA-Phi-3-V-3.8B     |         64.3         |       57.0        |       60.6        |
 ## 🛠️ Getting Started
 
 ### Dataset Preparation
@@ -52,8 +51,7 @@ Third, download the weights of [CLIP-336](https://huggingface.co/openai/clip-vit
 
 #### Inference
 We provide the model weights based on Chat-UniVi-7B and LLaVA-Phi3-V-3.8B:
-[Google Drive]()/[Baidu Drive](链接: https://pan.baidu.com/s/1YO5BwNx8fXxWTDCgllx1kw?pwd=74j4 提取码: 74j4 
---来自百度网盘超级会员v6的分享)
+[Google Drive]()/[Baidu Drive](https://pan.baidu.com/s/1YO5BwNx8fXxWTDCgllx1kw?pwd=74j4)
 
 
 ### Installation
