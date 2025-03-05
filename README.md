@@ -52,7 +52,8 @@ Third, download the weights of [CLIP-336](https://huggingface.co/openai/clip-vit
 
 #### Inference
 We provide the model weights based on Chat-UniVi-7B and LLaVA-Phi3-V-3.8B:
-[Google Drive]()/[Baidu Drive]()
+[Google Drive]()/[Baidu Drive](链接: https://pan.baidu.com/s/1YO5BwNx8fXxWTDCgllx1kw?pwd=74j4 提取码: 74j4 
+--来自百度网盘超级会员v6的分享)
 
 
 ### Installation
