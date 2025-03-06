@@ -50,7 +50,7 @@ Second, download the pretrained weights of [Chat-UniVi](https://github.com/PKU-Y
 Third, download the weights of [CLIP-336](https://huggingface.co/openai/clip-vit-large-patch14-336) for keyframe selection during inference.
 
 #### Inference
-We provide the model weights based on Chat-UniVi-7B and LLaVA-Phi3-V-3.8B:
+We provide the model weights based on Chat-UniVi-7B:
 [Google Drive]()/[Baidu Drive](https://pan.baidu.com/s/1YO5BwNx8fXxWTDCgllx1kw?pwd=74j4)
 
 
