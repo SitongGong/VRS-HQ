@@ -25,7 +25,7 @@ Comparison with previous VRS approaches. (a) Previous methods utilize a single &
 </div>
 
 ### Performance
-In addition to providing the results of Chat-UniVi, we also present superior experimental results on LLaVA-Phi-3-V, demonstrating the effectiveness of our proposed method.
+We provide the results based on Chat-UniVi-7B, demonstrating the effectiveness of our proposed method.
 |      **Model**       | **MLLM** |      **Referring (J&F)** | **Reasoning (J&F)** | **Overall (J&F)** |
 | :------------------: | :----------: | :-----------------: | :----------------: | :---------------: |
 |   VISA    |     Chat-UniVi-7B    |            50.9          |       43.0        |       46.9        |
@@ -45,7 +45,7 @@ cd checkpoints
 bash download_ckpts.sh
 ```
 
-Second, download the pretrained weights of [Chat-UniVi](https://github.com/PKU-YuanGroup/Chat-UniVi) and [LLaVA-Phi-3-V](https://github.com/mbzuai-oryx/LLaVA-pp). 
+Second, download the pretrained weights of [Chat-UniVi](https://github.com/PKU-YuanGroup/Chat-UniVi). 
 
 Third, download the weights of [CLIP-336](https://huggingface.co/openai/clip-vit-large-patch14-336) for keyframe selection during inference.
 
@@ -63,8 +63,6 @@ cd VRS-HQ
 pip install -e .
 # For Chat-UniVi
 pip install transformers==4.31.0
-# For LLaVA-Phi-3-V
-pip install transformers==4.41.0
 ```
 
 ### Validation
