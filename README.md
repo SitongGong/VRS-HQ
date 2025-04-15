@@ -70,11 +70,11 @@ Updating
 #### Running VRSHQ to generate masks
 You only need to rectify some configurations and filepath in the evaluation code. 
 ```bash
-# For Ref-DAVIS17
-CUDA_VISIBLE_DEVICES='0' deepspeed --master_port=24999 evaluation_multiseg_refytvos_phi3.py \
-    --val_dataset "davis17_valid" \
+# For ReVOS
+CUDA_VISIBLE_DEVICES='0' deepspeed --master_port=24999 evaluation_multiseg.py \
+    --val_dataset "revos_valid" \
     --log_base_dir "/18515601223/segment-anything-2/rvos_results" \
-    --exp_name "evaluation_davis17_phi3" \
+    --exp_name "evaluation_revos" \
 ```
 
 #### Using tools to calculate the metrics
