@@ -17,7 +17,7 @@ import torch.nn.functional as F
 from PIL import Image
 # from model.VISA_single_image_inference import VISAForCausalLM      # 主要用来进行sam2的单帧分割而后使用memory机制进行推理
 # from model.VISA_multiseg_inference import VISAForCausalLM
-from model.VISA_multiseg_cliptree_bf16 import VISAForCausalLM
+from model.VISA_multiseg_cliptree_bf16 import VrshqForCausalLM
 from model.llava import conversation as conversation_lib
 from dataset.multi_dataset import HybridDataset, ValDataset, collate_fn
 from dataset.rvos_clip_eval_dataset import RVOSEvalDataset, collate_fn_
