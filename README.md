@@ -56,13 +56,13 @@ We provide the model weights based on Chat-UniVi-7B on the Huggingface and Baidu
 
 ### Installation
 ```shell
-conda create -n vrshq python=3.10 -y
+conda create -n vrshq python=3.11.9 -y
 conda activate vrshq
 git clone https://github.com/SitongGong/VRS-HQ
 cd VRS-HQ
 pip install -e .
 # For Chat-UniVi
-pip install transformers==4.31.0
+pip install -r requirements.txt
 ```
 
 ### Validation
