@@ -1,6 +1,6 @@
 transformers==4.31.0
 peft==0.4.0
-deepspeed==0.9.5
+deepspeed==0.16.7
 tensorboard==2.17.0
 timm==0.6.13
 sentencepiece==0.2.0
