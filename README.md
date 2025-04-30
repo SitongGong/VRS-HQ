@@ -33,27 +33,6 @@ We provide the results based on Chat-UniVi-7B, demonstrating the effectiveness o
 | VRS-HQ |      Chat-UniVi-7B    |        62.1         |        56.1       |       59.1        |
 ## 🛠️ Getting Started
 
-### Dataset Preparation
-Please follow the [VISA](https://github.com/cilinyan/VISA) project to download the corresponding image and video datasets. Our data file structure for training and inference will remain consistent with theirs.
-
-### Pretrained Weights
-
-#### Training 
-First, download the pretrained weights of SAM2 (hiera_large) by running: 
-```bash
-cd checkpoints
-bash download_ckpts.sh
-```
-
-Second, download the pretrained weights of [Chat-UniVi](https://github.com/PKU-YuanGroup/Chat-UniVi). 
-
-Third, download the weights of [CLIP-336](https://huggingface.co/openai/clip-vit-large-patch14-336) for keyframe selection during inference.
-
-#### Inference
-We provide the model weights based on Chat-UniVi-7B on the Huggingface and Baidu Drive respectively:
-[Huggingface](https://huggingface.co/SitongGong/VRS-HQ)/[Baidu Drive](https://pan.baidu.com/s/1YO5BwNx8fXxWTDCgllx1kw?pwd=74j4)
-
-
 ### Installation
 ```shell
 conda create -n vrshq python=3.11.9 -y
@@ -65,8 +44,28 @@ pip install -e .
 pip install -r requirements.txt
 ```
 
+### Dataset Preparation
+Please follow the [VISA](https://github.com/cilinyan/VISA) project to download the corresponding image and video datasets. Our data file structure for training and inference will remain consistent with theirs.
+
+### Training 
+First, download the pretrained weights of SAM2 (hiera_large) by running: 
+```bash
+cd checkpoints
+bash download_ckpts.sh
+```
+
+Second, download the pretrained weights of [Chat-UniVi](https://github.com/PKU-YuanGroup/Chat-UniVi). 
+
+Updating ...
+
 ### Validation
-Updating
+
+#### Download Pretrained Weights
+We provide the model weights based on Chat-UniVi-7B on the Huggingface and Baidu Drive respectively:
+[Huggingface](https://huggingface.co/SitongGong/VRS-HQ)/[Baidu Drive](https://pan.baidu.com/s/1YO5BwNx8fXxWTDCgllx1kw?pwd=74j4)
+
+You need to download the weights of [CLIP-336](https://huggingface.co/openai/clip-vit-large-patch14-336) for keyframe selection during inference.
+
 #### Running VRSHQ to generate masks
 You only need to rectify some configurations and filepath in the evaluation code. 
 ```bash
