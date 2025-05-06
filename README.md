@@ -62,7 +62,7 @@ Updating ...
 
 #### Download Pretrained Weights
 We provide the model weights based on Chat-UniVi-7B on the Huggingface and Baidu Drive respectively:
-[Huggingface](https://huggingface.co/SitongGong/VRS-HQ)/[Baidu Drive]([https://pan.baidu.com/s/1tK4ywf2DV3NGMOehsyaTeA?pwd=fmhc])
+[Huggingface](https://huggingface.co/SitongGong/VRS-HQ)/[Baidu Drive](https://pan.baidu.com/s/1tK4ywf2DV3NGMOehsyaTeA?pwd=fmhc)
 
 You need to download the weights of [CLIP-336](https://huggingface.co/openai/clip-vit-large-patch14-336) for keyframe selection during inference.
 
