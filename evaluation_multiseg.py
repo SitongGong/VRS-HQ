@@ -210,7 +210,7 @@ def main(args):
     if not args.eval_only:
         model.get_model().initialize_lisa_modules(model.get_model().config)
 
-    state_dict = torch.load(os.path.join(args.pretrained_weights, "pytorch_model-00003-of-00003.bin"), map_location="cpu")
+    state_dict = torch.load(os.path.join(args.pretrained_weights, "pytorch_model-00002-of-00002.bin"), map_location="cpu")
     model.load_state_dict(state_dict, strict=False)     
 
     for p in vision_tower.parameters():
