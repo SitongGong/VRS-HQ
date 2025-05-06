@@ -171,7 +171,7 @@ def main(args):
         "track_token_idx": args.track_token_idx,
         "vision_pretrained": args.vision_pretrained,
         "alpha": args.alpha,
-        "vision_tower": "openai/clip-vit-large-patch14",
+        "vision_tower": args.vision_tower,
         "use_im_start_end": False,
     }
     # model_args = AutoConfig.from_pretrained(args.version)
@@ -180,7 +180,7 @@ def main(args):
         torch_dtype = torch.bfloat16
     elif args.precision == "fp16":
         torch_dtype = torch.half
-    model = VISAForCausalLM.from_pretrained(
+    model = VrshqForCausalLM.from_pretrained(
         pretrained_model_name_or_path=args.pretrained_weights, torch_dtype=torch_dtype, low_cpu_mem_usage=True, **model_args
     )
     model.config.eos_token_id = tokenizer.eos_token_id
