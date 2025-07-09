@@ -58,13 +58,13 @@ def sigmoid_ce_loss(
     return loss
 
 
-class VisaMetaModel:
+class VrshqMetaModel:
     def __init__(
         self,
         config,
         **kwargs,
     ):
-        super(VisaMetaModel, self).__init__(config)
+        super(VrshqMetaModel, self).__init__(config)
 
         self.config = config
         if not hasattr(self.config, "train_mask_decoder"):
@@ -101,13 +101,13 @@ class VisaMetaModel:
             param.requires_grad = True
 
 
-class VisaModel(VisaMetaModel, ChatUniViLlamaModel):
+class VrshqModel(VrshqMetaModel, ChatUniViLlamaModel):
     def __init__(
         self,
         config,
         **kwargs,
     ):
-        super(VisaModel, self).__init__(config, **kwargs)
+        super(VrshqModel, self).__init__(config, **kwargs)
 
         self.config.use_cache = False
         self.config.vision_tower = self.config.mm_vision_tower
@@ -120,7 +120,7 @@ class VisaModel(VisaMetaModel, ChatUniViLlamaModel):
         self.config.mm_use_im_patch_token = False
 
 
-class VISAForCausalLM(ChatUniViLlamaForCausalLM):
+class VrshqForCausalLM(ChatUniViLlamaForCausalLM):
     def __init__(
         self,
         config,
@@ -144,7 +144,7 @@ class VISAForCausalLM(ChatUniViLlamaForCausalLM):
 
         super().__init__(config)
 
-        self.model = VisaModel(config, **kwargs)
+        self.model = VrshqModel(config, **kwargs)
 
         self.lm_head = nn.Linear(config.hidden_size, config.vocab_size, bias=False)
 
