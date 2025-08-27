@@ -18,7 +18,7 @@ class CLIPVisionTower(nn.Module):
             self.select_layer = args.mm_vision_select_layer
             self.select_feature = getattr(args, 'mm_vision_select_feature', 'patch')
 
-        self.vision_tower_name = '/18515601223/openai/clip-vit-large-patch14'
+        # self.vision_tower_name = '/18515601223/openai/clip-vit-large-patch14'
 
         if not delay_load:
             self.load_model()
