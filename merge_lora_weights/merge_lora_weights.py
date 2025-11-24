@@ -29,7 +29,7 @@ def parse_args(args):
     parser = argparse.ArgumentParser(description="merge lora weights and save model with hf format")
     parser.add_argument("--version", default="chat_univi", type=str)         # path to chatunivi
     parser.add_argument("--weight", default="/18515601223/segment-anything-2/runs/VISA-SAM2-MULTISEG-0.1/pytorch_model.bin", type=str)       # path to your checkpoints
-    parser.add_argument("--save_path", default="/18515601223/segment-anything-2/save_weights_multiseg_0.1_bf16", type=str)     
+    parser.add_argument("--save_path", default="/18515601223/segment-anything-2/save_weights_multiseg_0.1_bf16", type=str)      # the save path
     parser.add_argument("--precision", default="bf16", type=str, choices=["fp32", "bf16", "fp16"], help="precision for inference")
     parser.add_argument("--out_dim", default=256, type=int)
     parser.add_argument("--image_size", default=1024, type=int, help="image size")

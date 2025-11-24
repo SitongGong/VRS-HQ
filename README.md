@@ -56,7 +56,22 @@ bash download_ckpts.sh
 
 Second, download the pretrained weights of [Chat-UniVi](https://github.com/PKU-YuanGroup/Chat-UniVi). 
 
-Updating ...
+Third, use the scripts for training.
+```bash
+export NCCL_BLOCKING_WAIT=1
+export TOKENIZERS_PARALLELISM=True
+CUDA_VISIBLE_DEVICES=0,1,2,3 deepspeed --master_port=24999 train.py \
+   --balance_sample \
+   --grad_accumulation_steps 32 \
+   --batch_size 1 \
+   --alpha 0.1
+```
+
+Finally, merge the lora weights to the original model.
+```bash
+cd merge_lora_weights
+python merge_lora_weights.py
+```
 
 ### Validation
 
@@ -72,12 +87,24 @@ You only need to rectify some configurations and filepath in the evaluation code
 # For ReVOS
 CUDA_VISIBLE_DEVICES='0' deepspeed --master_port=24999 evaluation_multiseg.py \
     --val_dataset "revos_valid" \
-    --log_base_dir "/18515601223/segment-anything-2/rvos_results" \
+    --log_base_dir "VRS-HQ/rvos_results" \
     --exp_name "evaluation_revos" \
 ```
 
 #### Using tools to calculate the metrics
+For ReVOS or Ref-DAVIS, you can use the following command: (For Ref-DAVIS, you can substitute the corresponding filepath)
+```bash
+cd tools
+python eval_revos.py \
+    'rvos_results/evaluation_revos/Annotations' \
+    --visa_exp_path 'dataset/rvos_root/ReVOS/meta_expressions_valid_.json' \
+    --visa_mask_path 'dataset/rvos_root/ReVOS/mask_dict.json' \
+    --visa_foreground_mask_path 'dataset/rvos_root/ReVOS/mask_dict_foreground.json' \
+```
 
+For MeViS and Ref-Youtube-VOS, please use the zip_mp_mevis.py to obtain a '.zip' file and then submit it to the server.
+[MeViS](https://codalab.lisn.upsaclay.fr/competitions/15094#phases)
+[Ref-Youtube-VOS](https://codalab.lisn.upsaclay.fr/competitions/3282#participate-submit_results)
 
 <details open>
 <summary> <strong>📑 Todo list</strong> </summary>
@@ -86,7 +113,7 @@ CUDA_VISIBLE_DEVICES='0' deepspeed --master_port=24999 evaluation_multiseg.py \
 
 - [ <span>&#x2705;</span> ] Release the model weights of VRS-HQ
 
-- [ ] Release training code
+- [ <span>&#x2705;</span> ] Release training code
 
 </details>
 
